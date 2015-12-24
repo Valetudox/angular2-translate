@@ -1,0 +1,26 @@
+{
+  "name": "angular2-translate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Valetudox/angular2-translate.git"
+  },
+  "author": "Viktor Somodi <viktor.somodi@emarsys.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Valetudox/angular2-translate/issues"
+  },
+  "homepage": "https://github.com/Valetudox/angular2-translate#readme",
+  "dependencies": {
+    "sprintf-js": "^1.0.3",
+    "flat": "^1.6.0"
+  },
+  "devDependencies": {
+    "angular2": "^2.0.0-beta.0"
+  }
+}
