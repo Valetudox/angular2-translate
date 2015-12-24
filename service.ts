@@ -5,10 +5,11 @@ let { vsprintf } = require('sprintf-js');
 @Injectable()
 export class TranslateService {
 
-  private translations;
+  private translations = {};
 
-  constructor(@Inject('translations') translations:Object) {
-    this.translations = flatten(translations);
+
+  setTranslations(value) {
+    this.translations = flatten(value);
   }
 
 
