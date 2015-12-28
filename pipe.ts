@@ -4,10 +4,10 @@ import { TranslateService } from './service';
 @Pipe({ name: 'translate' })
 export class TranslatePipe implements PipeTransform {
 
-  constructor(private translateService: TranslateService) {}
+  constructor(private _translateService: TranslateService) { }
 
-  transform(value, options) {
-    return this.translateService.translate(value, options);
+  transform(value: string, options: Array<any> = []) {
+    return this._translateService.translate(value, options);
   }
 
 }

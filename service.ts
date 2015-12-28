@@ -5,18 +5,18 @@ let { vsprintf } = require('sprintf-js');
 @Injectable()
 export class TranslateService {
 
-  private translations = {};
+  private _translations = <any>{};
 
 
-  setTranslations(value) {
-    this.translations = flatten(value);
+  setTranslations(value: Object) {
+    this._translations = flatten(value);
   }
 
 
-  translate(value, parameters = [[]]) {
-    let translated = this.translations[value];
+  translate(value: string, parameters: Array<any> = []) {
+    let translated = (this._translations[value]) ? this._translations[value] : value;
     try {
-      return vsprintf(translated, parameters[0]);
+      return vsprintf(translated, parameters);
     } catch (e) {
       return value.replace(/%s|%d/gi, '');
     }
