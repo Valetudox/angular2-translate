@@ -1,6 +1,5 @@
 node_modules/*
-*.ts
-!*.d.ts
-tests
-.idea
+lib/
+tests/
+.idea/
 .DS_Store
