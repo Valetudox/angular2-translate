@@ -1,5 +1,7 @@
 # Angular2 translate
 
+This is a simple translate service solution for angular2. You should provide a dictionary and the service will translate it with sprintf interpolation.
+
 Install
 ---------
 
