@@ -26,13 +26,14 @@ const translations = {
   selector: '#suite-dashboard-container',
   pipes: [TranslatePipe],
   template: `
-    <h1>{{ 'main.text' | translate:'a','b' }}</hello>
+    <h1>{{ 'main.text' | translate:'Luke':controllerVariable }}</hello>
   `
 })
 export class App {
 
   constructor(translateService: TranslateService) {
     translateService.setTranslations(translations);
+    this.controllerVariable = 'Darth Vader';
   }
 
 
