@@ -2,7 +2,7 @@
 
 import 'es6-shim';
 import 'reflect-metadata';
-const { expect } = require('chai');
+import { expect } from 'chai';
 import { TranslateService } from '../lib';
 
 describe('Service', function() {
