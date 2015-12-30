@@ -11,7 +11,7 @@ npm install --save angular2-translate
 Setup
 ---------
 
-provide a translations in your bootstrap
+provide `translations` in your bootstrap
 
 ```javascript
 
