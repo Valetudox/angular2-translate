@@ -11,30 +11,21 @@ npm install --save angular2-translate
 Setup
 ---------
 
+provide a translations in your bootstrap
+
 ```javascript
 
-import { TranslateService } from 'angular2-translate';
+provide('translations', { 
+  useValue: {
+    main: {
+      text: 'I am: %s you are: %s'
+    },
+    other: {
+      withoutInterpolation: 'Star Wars'
+    }
+  } 
+});
 
-const translations = {
-  main: {
-    text: 'I am: %s you are: %s'
-  },
-  other: {
-    withoutInterpolation: 'Star Wars'
-  }
-};
-
-@Component({
-  selector: '<app>',
-  template: `
-    Your main app
-  `
-})
-export class App {
-
-  constructor(translateService: TranslateService) {
-    translateService.setTranslations(translations);
-  }
 ```
 
 Usage in template
