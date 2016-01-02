@@ -1,7 +1,7 @@
 # Angular2 translate
 
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
-https://david-dm.org/Valetudox/angular2-translate.svg
+[![dependency-status](https://david-dm.org/Valetudox/angular2-translate.svg)
 
 This is a simple translate service solution for angular2. You should provide a dictionary and the service will translate it with sprintf interpolation.
 
