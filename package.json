@@ -14,7 +14,7 @@
   "main": "dist/index.js",
   "scripts": {
     "build": "rm -rf dist/* && babel lib --out-dir dist --source-maps",
-    "test": "mocha $(find test -name \"*.spec.js\") --compilers js:babel-register",
+    "test": "nyc --require babel-register mocha test/*.spec.js",
     "prepublish": "npm test && npm run build",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
@@ -51,6 +51,7 @@
     "es6-promise": "^3.0.2",
     "es6-shim": "^0.34.0",
     "mocha": "^2.3.4",
+    "nyc": "^5.1.1",
     "reflect-metadata": "^0.1.2",
     "rxjs": "5.0.0-beta.0",
     "semantic-release": "^4.3.5",
