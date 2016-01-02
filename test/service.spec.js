@@ -40,6 +40,12 @@ describe('Service', function() {
       expect(service.translate('%s wrongKey %s', ['a', 'b'])).to.eql('a wrongKey b');
     });
 
+
+    it('should remove the interpolation places if they are not match for the expectations', function() {
+      let service = createService({ key: '%s value %d' });
+      expect(service.translate('key', ['string', 'expects for decimal'])).to.eql(' value ');
+    });
+
   });
 
   describe('#setTranslations', function() {
