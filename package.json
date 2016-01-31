@@ -14,10 +14,19 @@
   "main": "dist/index.js",
   "scripts": {
     "build": "rm -rf dist/* && babel lib --out-dir dist --source-maps",
-    "test": "nyc --require babel-register mocha test/*.spec.js",
+    "test": "nyc --require babel-register ava",
     "coverage": "npm test && nyc report --reporter=text-lcov | coveralls",
     "prepublish": "npm test && npm run build",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+  },
+  "ava": {
+    "files": [
+      "test/*.spec.js"
+    ],
+    "failFast": true,
+    "serial": true,
+    "tap": true,
+    "verbose": true
   },
   "release": {
     "verifyConditions": {
@@ -40,6 +49,7 @@
   },
   "devDependencies": {
     "angular2": "^2.0.0-beta.0",
+    "ava": "^0.11.0",
     "babel-cli": "^6.2.0",
     "babel-plugin-angular2-annotations": "3.1.0",
     "babel-plugin-transform-class-properties": "6.3.13",
