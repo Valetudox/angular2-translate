@@ -1,9 +1,6 @@
 {
   "name": "angular2-translate",
   "description": "Simple translate for angular2",
-  "bin": {
-    "semantic-release": "bin/semantic-release.js"
-  },
   "keywords": [
     "angular",
     "angular2",
@@ -14,7 +11,6 @@
   "typings": "./dist/index.d.ts",
   "scripts": {
     "test": "mocha --require es6-shim --require es6-promise --require reflect-metadata --require ts-node/register lib/**/*.spec.ts",
-    "coverage": "npm test && nyc report --reporter=text-lcov | coveralls",
     "prepublish": "typings install && rimraf dist && tsc",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
