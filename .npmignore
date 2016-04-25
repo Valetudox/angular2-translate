@@ -1,6 +1,4 @@
 node_modules/*
 lib/
-test/
-.idea/
 .DS_Store
-.nyc_output/
+typings/

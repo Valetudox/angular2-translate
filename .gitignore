@@ -1,5 +1,4 @@
 *.log
 node_modules/
-.idea/
 dist/
-.nyc_output/
+typings/

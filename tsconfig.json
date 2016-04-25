@@ -1,0 +1,23 @@
+{
+    "compilerOptions": {
+        "noImplicitAny": true,
+        "module": "commonjs",
+        "target": "ES5",
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "sourceMap": true,
+        "declaration": true,
+        "outDir": "dist/"
+    },
+    "exclude": [
+        "node_modules",
+        "typings/main.d.ts",
+        "typings/main",
+        "./test/**/*.spec.ts"
+    ],
+    "filesGlob": [
+        "./lib/**/*.ts",
+        "!./node_modules/**/*.ts",
+        "typings/browser.d.ts"
+    ]
+}
