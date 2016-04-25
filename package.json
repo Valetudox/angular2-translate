@@ -19,11 +19,6 @@
     "prepublish": "typings install && rimraf dist && tsc",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
-  "release": {
-    "verifyConditions": {
-      "path": "./node_modules/semantic-release/dist/lib/plugin-verify.js"
-    }
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Valetudox/angular2-translate.git"
