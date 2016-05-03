@@ -1,4 +1,4 @@
-import { Injectable, Inject } from 'angular2/core';
+import { Injectable, Inject } from '@angular/core';
 const { flatten } = require('flat');
 const { vsprintf } = require('sprintf-js');
 

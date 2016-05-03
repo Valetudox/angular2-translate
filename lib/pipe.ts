@@ -1,4 +1,4 @@
-import { Pipe } from 'angular2/core';
+import { Pipe } from '@angular/core';
 import { TranslateService } from './service';
 
 @Pipe({ name: 'translate' })
