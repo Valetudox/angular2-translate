@@ -11,13 +11,11 @@
     },
     "exclude": [
         "node_modules",
-        "typings/main.d.ts",
-        "typings/main",
         "./test/**/*.spec.ts"
     ],
     "filesGlob": [
         "./lib/**/*.ts",
         "!./node_modules/**/*.ts",
-        "typings/browser.d.ts"
+        "typings/index.d.ts"
     ]
 }
