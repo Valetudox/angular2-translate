@@ -15,7 +15,12 @@ export class TranslateService {
   }
 
 
-  translate(value: string, parameters: any[] = []) {
+  hasTranslation(value: string): boolean {
+    return !!this._translations[value];
+  }
+
+
+  translate(value: string, parameters: any[] = []): string {
     let translated = (this._translations[value]) ? this._translations[value] : value;
     try {
       return vsprintf(translated, parameters);

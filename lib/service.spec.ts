@@ -7,6 +7,21 @@ describe('service', () => {
     return new TranslateService(translations);
   };
 
+  describe('#hasTranslation', () => {
+
+    it('should give back false if there is no translation for it', () => {
+      const service = createService({ key: 'value' });
+      expect(service.hasTranslation('notExists')).to.eql(false);
+    });
+
+
+    it('should give back true if there is translation for it', () => {
+      const service = createService({ what: 'val' });
+      expect(service.hasTranslation('what')).to.eql(true);
+    });
+
+  });
+
   describe('#translate', () => {
 
     it('should translate the given simple text', () => {
