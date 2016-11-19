@@ -13,11 +13,11 @@ npm install --save angular2-translate
 Setup
 ---------
 
-provide `translations` in your bootstrap
-
 ```javascript
 
-provide('translations', { 
+import { TranslateModule } from 'angular2-translate';
+
+const translations = {
   useValue: {
     main: {
       text: 'I am: %s you are: %s'
@@ -25,8 +25,18 @@ provide('translations', {
     other: {
       withoutInterpolation: 'Star Wars'
     }
-  } 
-});
+  }
+};
+
+@NgModule({
+  imports: [
+    BrowserModule,
+    TranslateModule.create(translations)
+  ],
+  declarations: [AppComponent],
+  bootstrap:    [AppComponent]
+})
+export class AppModule { }
 
 ```
 
@@ -39,7 +49,6 @@ import { TranslatePipe } from 'angular2-translate';
 
 @Component({
   selector: '<sub-app>',
-  pipes: [TranslatePipe],
   template: `
     <h1>{{ 'main.text' | translate:'Luke':controllerVariable }}</h1>
     <h2>{{ 'other.withoutInterpolation' | translate }}</h2>
